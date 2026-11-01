@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "qiskit-fest"
+version = "1.0.0"
+description = "QubitHub Qiskit Fall Fest 2026 - ten-challenge quantum computing hackathon: helper package, checks and tooling"
+readme = "README.md"
+requires-python = ">=3.11"   # the pinned qiskit-aer 0.18.0 needs 3.11+ (3.10 is also end-of-life); verified on 3.11, 3.12, 3.13 and 3.14
+# COMPATIBLE RANGES only. The exact versions that were executed and verified are pinned in requirements.txt.
+# Anything outside those pins is UNVERIFIED: run `python scripts/validate_all.py` to verify another combination.
+dependencies = [
+    "qiskit>=2.0,<3",
+    "numpy>=2.0,<3",
+    "scipy>=1.11",
+    "matplotlib>=3.8",
+    "pylatexenc>=2.10",   # needed by Qiskit's matplotlib circuit drawer
+    "pytest>=8",          # the public checks run through pytest
+]
+
+[project.optional-dependencies]
+# Challenge 6 (noise) needs Qiskit Aer. It is optional so that the other nine challenges never depend on it.
+aer = ["qiskit-aer>=0.17,<0.19"]
+# Only needed to execute / validate notebooks from the command line (not needed in Colab or JupyterLab itself).
+notebooks = ["ipykernel", "nbformat", "nbclient"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+minversion = "8.0"
+testpaths = ["tests"]
+pythonpath = [".", "src"]
+# The plugin provides --impl / --results-json, the `impl` fixture and the tier / covers / challenge markers.
+addopts = "-p qiskit_fest.testing -ra --strict-markers"

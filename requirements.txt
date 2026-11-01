@@ -1,0 +1,25 @@
+# QubitHub Qiskit Fall Fest 2026 - ten-challenge bank
+# EXACT environment that was executed and verified (Windows 11, CPython 3.11.9, clean virtual environment).
+#   pip install -r requirements.txt && pip install -e . --no-deps
+# pyproject.toml declares the *compatible ranges*; this file pins the *verified* versions. They do not conflict.
+# Any other combination (Colab's preinstalled libraries, Linux/macOS, Python >= 3.12, other Qiskit versions) is UNVERIFIED:
+# run `python scripts/validate_all.py` to verify it.
+
+# --- quantum + numerics --------------------------------------------------------
+qiskit==2.6.0
+qiskit-aer==0.18.0        # only Challenge 6 needs it (optional extra "aer" in pyproject.toml)
+numpy==2.4.6
+scipy==1.17.1
+
+# --- plotting ------------------------------------------------------------------
+matplotlib==3.11.2
+pylatexenc==2.11          # needed by circuit.draw("mpl")
+
+# --- testing -------------------------------------------------------------------
+pytest==9.1.1
+
+# --- running / validating notebooks from the command line ---------------------
+ipykernel==7.4.0
+nbformat==5.11.1
+nbclient==0.11.0
+# The Jupyter front-end itself (JupyterLab or Notebook) is deliberately NOT pinned: no test depends on it.
