@@ -19,6 +19,13 @@ TEST_TIERS = ("smoke", "core", "edge", "quality", "bonus", "meta")
 DEFAULT_RUBRIC = {"core": 60, "edge": 20, "explanation": 10, "code": 10}
 QUALITY_RUBRIC = {"core": 50, "edge": 15, "quality": 15, "explanation": 10, "code": 10}
 
+#: The public participant repository (owner/name) and its default branch. The setup cell of every notebook fetches the project from here when a notebook is
+#: opened straight from GitHub in Google Colab, and the "Open in Colab" badges of the notebooks and READMEs point to it. If the repository is renamed or moved,
+#: change it here and run ``python scripts/build_notebooks.py`` (the README table must be updated by hand; a test compares it with these values).
+PUBLIC_REPOSITORY = "hastikacheddy/qiskit-fall-fest-participant"
+PUBLIC_BRANCH = "main"
+COLAB_BADGE = "https://colab.research.google.com/assets/colab-badge.svg"
+
 
 @dataclass(frozen=True)
 class Requirement:
@@ -311,3 +318,19 @@ def get(number: int) -> Challenge:
 
 def all_requirement_ids() -> list[str]:
     return [r.id for ch in CHALLENGES for r in ch.requirements]
+
+
+def repository_url() -> str:
+    """The HTTPS address ``git clone`` uses for the public participant repository."""
+    return f"https://github.com/{PUBLIC_REPOSITORY}.git"
+
+
+def colab_url(challenge: int | Challenge) -> str:
+    """The address that opens the participant notebook of ``challenge`` (number or :class:`Challenge`) straight from GitHub in Google Colab."""
+    ch = get(challenge) if isinstance(challenge, int) else challenge
+    return f"https://colab.research.google.com/github/{PUBLIC_REPOSITORY}/blob/{PUBLIC_BRANCH}/challenges/{ch.folder}/{ch.notebook_name}"
+
+
+def colab_badge(challenge: int | Challenge) -> str:
+    """Markdown for the "Open in Colab" badge of a challenge."""
+    return f"[![Open In Colab]({COLAB_BADGE})]({colab_url(challenge)})"

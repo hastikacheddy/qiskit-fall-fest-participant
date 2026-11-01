@@ -1,5 +1,7 @@
 # Challenge 2: The Entanglement Detective
 
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/hastikacheddy/qiskit-fall-fest-participant/blob/main/challenges/challenge_02_entanglement/challenge_02_entanglement.ipynb)
+
 **Tier 1 - Foundations** · **Estimated time 20-30 min** · folder `challenges/challenge_02_entanglement/`
 
 > Two qubits always give matching answers. Is that entanglement - or just two coins that were set to the same face? Collect the evidence like a detective.

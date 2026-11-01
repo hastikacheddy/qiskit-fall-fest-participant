@@ -5,20 +5,22 @@ Each challenge is a Jupyter notebook with a story, the key idea, your **TODO** f
 what works, and hints that go from subtle to explicit. Everything runs on an ordinary laptop (CPU only): **no accounts, no API keys,
 no paid services and no quantum hardware.**
 
-| # | Challenge | Tier | Estimated time* | What you practise |
-|---|---|---|---|---|
-| 1 | Superposition Under the Microscope | 1 - Foundations | 15-25 min | amplitudes vs probabilities, exact vs sampled results |
-| 2 | The Entanglement Detective | 1 - Foundations | 20-30 min | Bell states, correlations in several bases, telling entangled from product states |
-| 3 | Gate Surgeon | 1 - Foundations | 20-30 min | reading and repairing circuits, bit order, equivalent circuits |
-| 4 | Teleport the Qubit | 2 - Algorithms and applications | 40-60 min | teleportation with mid-circuit measurement and classical control |
-| 5 | Find the Hidden State | 2 - Algorithms and applications | 40-60 min | Grover search: oracle, diffuser, number of iterations |
-| 6 | Fight the Noise | 2 - Algorithms and applications | 40-60 min | noise models, total variation distance, does mitigation really help? (needs `qiskit-aer`) |
-| 7 | The Quantum Network Cut | 2 - Algorithms and applications | 45-60 min | Max-Cut as a Hamiltonian, QAOA, correctness vs solution quality |
-| 8 | Teach a Quantum Circuit | 3 - Advanced | 60-90 min | variational classifier, training, train/test leakage, honest baselines |
-| 9 | Protect the Logical Qubit | 3 - Advanced | 50-80 min | three-qubit bit-flip code, syndromes, feed-forward, what it cannot protect |
-| 10 | The Hardware Architect | 3 - Advanced | 45-75 min | transpilation for a given coupling map: depth and two-qubit gate count |
+| # | Challenge | Tier | Estimated time* | What you practise | Colab |
+|---|---|---|---|---|---|
+| 1 | Superposition Under the Microscope | 1 - Foundations | 15-25 min | amplitudes vs probabilities, exact vs sampled results | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/hastikacheddy/qiskit-fall-fest-participant/blob/main/challenges/challenge_01_superposition/challenge_01_superposition.ipynb) |
+| 2 | The Entanglement Detective | 1 - Foundations | 20-30 min | Bell states, correlations in several bases, telling entangled from product states | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/hastikacheddy/qiskit-fall-fest-participant/blob/main/challenges/challenge_02_entanglement/challenge_02_entanglement.ipynb) |
+| 3 | Gate Surgeon | 1 - Foundations | 20-30 min | reading and repairing circuits, bit order, equivalent circuits | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/hastikacheddy/qiskit-fall-fest-participant/blob/main/challenges/challenge_03_gate_surgeon/challenge_03_gate_surgeon.ipynb) |
+| 4 | Teleport the Qubit | 2 - Algorithms and applications | 40-60 min | teleportation with mid-circuit measurement and classical control | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/hastikacheddy/qiskit-fall-fest-participant/blob/main/challenges/challenge_04_teleportation/challenge_04_teleportation.ipynb) |
+| 5 | Find the Hidden State | 2 - Algorithms and applications | 40-60 min | Grover search: oracle, diffuser, number of iterations | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/hastikacheddy/qiskit-fall-fest-participant/blob/main/challenges/challenge_05_grover/challenge_05_grover.ipynb) |
+| 6 | Fight the Noise | 2 - Algorithms and applications | 40-60 min | noise models, total variation distance, does mitigation really help? (needs `qiskit-aer`) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/hastikacheddy/qiskit-fall-fest-participant/blob/main/challenges/challenge_06_noise/challenge_06_noise.ipynb) |
+| 7 | The Quantum Network Cut | 2 - Algorithms and applications | 45-60 min | Max-Cut as a Hamiltonian, QAOA, correctness vs solution quality | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/hastikacheddy/qiskit-fall-fest-participant/blob/main/challenges/challenge_07_qaoa_maxcut/challenge_07_qaoa_maxcut.ipynb) |
+| 8 | Teach a Quantum Circuit | 3 - Advanced | 60-90 min | variational classifier, training, train/test leakage, honest baselines | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/hastikacheddy/qiskit-fall-fest-participant/blob/main/challenges/challenge_08_quantum_ml/challenge_08_quantum_ml.ipynb) |
+| 9 | Protect the Logical Qubit | 3 - Advanced | 50-80 min | three-qubit bit-flip code, syndromes, feed-forward, what it cannot protect | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/hastikacheddy/qiskit-fall-fest-participant/blob/main/challenges/challenge_09_error_correction/challenge_09_error_correction.ipynb) |
+| 10 | The Hardware Architect | 3 - Advanced | 45-75 min | transpilation for a given coupling map: depth and two-qubit gate count | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/hastikacheddy/qiskit-fall-fest-participant/blob/main/challenges/challenge_10_transpilation/challenge_10_transpilation.ipynb) |
 
 \* The times are **estimates**, not measurements. Start with challenge 1; the tiers get harder, but every challenge is self-contained.
+
+**New here?** Click a **Colab** badge to open that notebook in Google Colab - nothing to install, see [Colab](#colab) - or follow [Quick start - local Jupyter](#quick-start---local-jupyter) to work on your own computer.
 
 ## What you need
 
@@ -51,14 +53,22 @@ in the notebook's working folder and its parents.
 
 ## Colab
 
-Colab runs every notebook in its **own, initially empty virtual machine** (working folder `/content`), so the project folder has to be uploaded *in the notebook you work in* - and again for each
-challenge notebook you open. The project team went through this route once on a real Colab runtime (2026-10-30, Python 3.13): challenge 1 in the Colab interface from the upload to the hand-in cell,
-and all ten notebooks executed on that Colab machine. Colab changes its runtime images from time to time, so tell the organisers if a step behaves differently for you.
+The quickest route needs nothing on your computer: **click the "Open in Colab" badge of your challenge** in the table at the top of this page.
 
-1. Get the participant package from the organisers (a zip file, or a repository address they give you). Unzip it on your computer: you need the notebook of your challenge,
-   `challenges/challenge_NN_<name>/challenge_NN_<name>.ipynb`.
-2. In Colab choose *File > Upload notebook* and pick that notebook.
-3. Add a code cell above its first cell (hover over the top edge of the first cell and click *+ Code*) and run it:
+1. Colab opens the notebook straight from GitHub. When you run it, Colab warns that the notebook was not authored by Google - that is the standard message for every notebook that comes from GitHub; choose *Run anyway*
+   (everything the notebook runs is in this repository).
+2. Run the first cell (*Setup*). Colab opened only the notebook, so the cell **fetches the project from GitHub** into the Colab machine (a few seconds), installs it together with the compatible Qiskit version
+   (about a minute the first time) and prints the library versions it found. Colab's own versions differ from the tested ones: if a check behaves oddly, the cell says which versions differ.
+3. Work through the notebook as described under *Open a challenge*. Colab does **not** save changes to the GitHub original, and every notebook runs on its own, initially empty machine: use
+   *File > Save a copy in Drive* (or *File > Download .ipynb*) before you leave - a recycled runtime forgets everything. For the next challenge you open, the setup cell fetches the project again.
+4. To hand in, run the last cell: it writes `submission_cNN.py` into `/content`. Open the *Files* pane (folder icon), right-click the file and choose *Download*.
+
+**If the badge does not work for you** - for example because the organisers gave you a zip file - upload the project yourself. Colab runs every notebook in its own, initially empty machine, so do this *in the notebook you work in*, and again for
+each challenge notebook you open. The project team went through this route once on a real Colab runtime (2026-10-30, Python 3.13): challenge 1 in the Colab interface from the upload to the hand-in cell,
+and all ten notebooks executed on that Colab machine.
+
+1. Unzip the file on your computer: you need the notebook of your challenge, `challenges/challenge_NN_<name>/challenge_NN_<name>.ipynb`. In Colab choose *File > Upload notebook* and pick that notebook.
+2. Add a code cell above its first cell (hover over the top edge of the first cell and click *+ Code*) and run it:
 
    ```python
    from google.colab import files
@@ -68,11 +78,12 @@ and all ten notebooks executed on that Colab machine. Colab changes its runtime 
    ```
 
    (If you received a repository address, use `!git clone <that address>` and `%cd` into the folder it creates.)
-4. Run the setup cell (the first cell of the notebook). It finds the project when it is the working folder, one of its parents, or a folder right below it, installs the helper package
+3. Run the setup cell (the first cell of the notebook). It finds the project when it is the working folder, one of its parents, or a folder right below it, installs the helper package
    (`pip install -e .`) and the compatible Qiskit version from `pyproject.toml`; this takes a minute. If it says that it cannot find the project, run `%cd /content/participant_package` in a cell above it first.
    If Colab shows a banner asking you to restart the session after the installation, restart it and run the setup cell again.
-   Colab's own library versions differ from the tested ones: if a check behaves oddly, the setup cell prints which versions differ.
-5. Colab files disappear when the runtime is recycled: download your notebook (*File > Download .ipynb*) before you leave.
+4. Colab files disappear when the runtime is recycled: download your notebook (*File > Download .ipynb*) before you leave. The last cell writes `submission_cNN.py` into the folder you entered with `%cd`.
+
+Colab changes its runtime images from time to time, so tell the organisers if a step behaves differently for you.
 
 ## Open a challenge
 
@@ -95,8 +106,8 @@ pytest tests/public/test_c01_public.py --impl challenges/challenge_01_superposit
 pytest tests/public/test_c01_public.py --impl path/to/your_notebook.ipynb                            # your notebook
 ```
 
-To hand in your work, save the notebook or run the last cell: it writes `submission_cNN.py` into the folder the notebook runs in (normally the folder of the notebook; in Colab the folder you
-entered with `%cd`, listed in the *Files* pane, where you can download it).
+To hand in your work, save the notebook or run the last cell: it writes `submission_cNN.py` into the folder the notebook runs in (normally the folder of the notebook; in Colab `/content`
+or the folder you entered with `%cd`, listed in the *Files* pane, where you can download it).
 
 ## How your work is checked
 

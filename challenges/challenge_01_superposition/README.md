@@ -1,5 +1,7 @@
 # Challenge 1: Superposition Under the Microscope
 
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/hastikacheddy/qiskit-fall-fest-participant/blob/main/challenges/challenge_01_superposition/challenge_01_superposition.ipynb)
+
 **Tier 1 - Foundations** · **Estimated time 15-25 min** · folder `challenges/challenge_01_superposition/`
 
 > A lab technician needs a one-qubit source that, when measured, gives 0 or 1 with equal probability - and wants to understand exactly what the *amplitudes* behind those probabilities are.

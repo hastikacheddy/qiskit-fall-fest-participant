@@ -1,5 +1,7 @@
 # Challenge 3: Gate Surgeon
 
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/hastikacheddy/qiskit-fall-fest-participant/blob/main/challenges/challenge_03_gate_surgeon/challenge_03_gate_surgeon.ipynb)
+
 **Tier 1 - Foundations** · **Estimated time 20-30 min** · folder `challenges/challenge_03_gate_surgeon/`
 
 > Three circuits arrive at the clinic with symptoms: wrong states, wrong unitaries, wrong angles. Diagnose the bugs and operate - without changing what each circuit is supposed to do.

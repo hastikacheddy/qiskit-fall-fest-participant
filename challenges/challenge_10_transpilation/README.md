@@ -1,5 +1,7 @@
 # Challenge 10: The Hardware Architect
 
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/hastikacheddy/qiskit-fall-fest-participant/blob/main/challenges/challenge_10_transpilation/challenge_10_transpilation.ipynb)
+
 **Tier 3 - Advanced Challenges** · **Estimated time 45-75 min** · folder `challenges/challenge_10_transpilation/`
 
 > Your algorithm assumes every qubit can talk to every other. The chip's qubits sit on a line. Re-engineer the circuit for this hardware - cheaper, shallower, and still doing exactly the same thing.

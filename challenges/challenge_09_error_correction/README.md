@@ -1,5 +1,7 @@
 # Challenge 9: Protect the Logical Qubit
 
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/hastikacheddy/qiskit-fall-fest-participant/blob/main/challenges/challenge_09_error_correction/challenge_09_error_correction.ipynb)
+
 **Tier 3 - Advanced Challenges** · **Estimated time 50-80 min** · folder `challenges/challenge_09_error_correction/`
 
 > A memory qubit sits idle and an occasional bit flip sneaks in. Spread one logical qubit over three physical ones, detect the flip without looking at the data, and undo it.

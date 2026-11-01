@@ -1,5 +1,7 @@
 # Challenge 8: Teach a Quantum Circuit
 
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/hastikacheddy/qiskit-fall-fest-participant/blob/main/challenges/challenge_08_quantum_ml/challenge_08_quantum_ml.ipynb)
+
 **Tier 3 - Advanced Challenges** · **Estimated time 60-90 min** · folder `challenges/challenge_08_quantum_ml/`
 
 > Train a two-qubit variational circuit to classify points in the plane, evaluate it honestly on held-out data, and compare it with a classical baseline - without leaking test data into training.

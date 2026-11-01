@@ -1,5 +1,7 @@
 # Challenge 5: Find the Hidden State
 
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/hastikacheddy/qiskit-fall-fest-participant/blob/main/challenges/challenge_05_grover/challenge_05_grover.ipynb)
+
 **Tier 2 - Quantum Algorithms and Applications** · **Estimated time 40-60 min** · folder `challenges/challenge_05_grover/`
 
 > A vault accepts exactly one n-bit code. Checking codes one by one takes ~2^n tries; Grover's algorithm needs only ~sqrt(2^n) oracle calls. Build the search and watch the amplitude of the hidden code grow.

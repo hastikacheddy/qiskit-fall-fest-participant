@@ -1,5 +1,7 @@
 # Challenge 7: The Quantum Network Cut
 
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/hastikacheddy/qiskit-fall-fest-participant/blob/main/challenges/challenge_07_qaoa_maxcut/challenge_07_qaoa_maxcut.ipynb)
+
 **Tier 2 - Quantum Algorithms and Applications** · **Estimated time 45-60 min** · folder `challenges/challenge_07_qaoa_maxcut/`
 
 > Split a small network into two data centres so that as many links as possible cross between them (Max-Cut). Compare a brute-force answer with a variational quantum approach (QAOA).

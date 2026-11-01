@@ -23,7 +23,7 @@ def require_repo_root() -> Path:
     root = repo_root()
     if root is None:
         raise RuntimeError(
-            "Could not find the qiskit-fall-fest-challenges folder. Open the notebook from inside that folder "
+            "Could not find the project folder (the one that contains pyproject.toml). Open the notebook from inside that folder "
             "(see README.md, section 'Open a challenge') or install the package with `pip install -e .`."
         )
     return root

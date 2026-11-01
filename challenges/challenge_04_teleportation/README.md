@@ -1,5 +1,7 @@
 # Challenge 4: Teleport the Qubit
 
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/hastikacheddy/qiskit-fall-fest-participant/blob/main/challenges/challenge_04_teleportation/challenge_04_teleportation.ipynb)
+
 **Tier 2 - Quantum Algorithms and Applications** · **Estimated time 40-60 min** · folder `challenges/challenge_04_teleportation/`
 
 > Alice must send an unknown qubit state to Bob. She may not look at it, copy it, or fly it over - but she can share an entangled pair in advance and send two ordinary bits by phone.

@@ -1,5 +1,7 @@
 # Challenge 6: Fight the Noise
 
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/hastikacheddy/qiskit-fall-fest-participant/blob/main/challenges/challenge_06_noise/challenge_06_noise.ipynb)
+
 **Tier 2 - Quantum Algorithms and Applications** · **Estimated time 40-60 min** · folder `challenges/challenge_06_noise/`
 
 > Your ideal circuit works perfectly - on paper. Real devices are noisy. Quantify exactly how much damage a documented noise model does, and test whether a mitigation trick really helps.
