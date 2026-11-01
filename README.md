@@ -63,6 +63,8 @@ The quickest route needs nothing on your computer: **click the "Open in Colab" b
    *File > Save a copy in Drive* (or *File > Download .ipynb*) before you leave - a recycled runtime forgets everything. For the next challenge you open, the setup cell fetches the project again.
 4. To hand in, run the last cell: it writes `submission_cNN.py` into `/content`. Open the *Files* pane (folder icon), right-click the file and choose *Download*.
 
+The project team tried exactly this route on a real Colab runtime on 2026-11-01: challenge 1 from the badge to the hand-in cell, and challenge 6 on a second, fresh runtime (details under *What was verified, and what was not*).
+
 **If the badge does not work for you** - for example because the organisers gave you a zip file - upload the project yourself. Colab runs every notebook in its own, initially empty machine, so do this *in the notebook you work in*, and again for
 each challenge notebook you open. The project team went through this route once on a real Colab runtime (2026-10-30, Python 3.13): challenge 1 in the Colab interface from the upload to the hand-in cell,
 and all ten notebooks executed on that Colab machine.
@@ -138,6 +140,7 @@ or the folder you entered with `%cd`, listed in the *Files* pane, where you can 
 | the setup cell warns that versions differ | everything should still work; `pip install -r requirements.txt` in a fresh virtual environment reproduces the tested versions |
 | `[TODO]` in the checks | that function still raises `NotImplementedError` - finish the TODO cell and run it again |
 | the notebook cannot find the project | open the notebook from this folder (see *Colab* for Colab) |
+| Colab: the setup cell stops with `Could not fetch the project from ...` | the Colab machine could not reach GitHub, or the repository address has changed: run the cell once more; if it fails again use the upload route under *Colab* and tell the organisers |
 
 ## Reporting a problem
 
@@ -153,10 +156,13 @@ Please do not paste credentials or personal data into a report; this project nee
 ## What was verified, and what was not
 
 The challenge bank was developed and checked on **Windows 11 with CPython 3.11.9 in a virtual environment** with exactly the versions in `requirements.txt`. The project's own test suite
-(the public and hidden tests run against the reference solutions) also passed in **Linux containers** with Python 3.11, 3.12, 3.13 and 3.14 using the pinned versions, and with Python 3.12 and 3.13 using the newest versions the declared ranges allow (Qiskit 2.6.1, NumPy 2.5.4, SciPy 1.18.1). On Windows a fresh virtual environment built from `requirements.txt` ran the notebooks of
-challenges 1 and 6 from their own setup cell, and a Colab-style emulation (Ubuntu 24.04, Python 3.12, the newest allowed library versions, project unzipped next to the notebook) ran all ten notebooks
+(the public and hidden tests run against the reference solutions) also passed in **Linux containers** with Python 3.11, 3.12, 3.13 and 3.14 using the pinned versions, and with Python 3.12 and 3.13 using the newest versions the declared ranges allow (Qiskit 2.6.1, NumPy 2.5.4, SciPy 1.18.1). On Windows a fresh virtual environment built from `requirements.txt` ran all ten notebooks from their own setup cell (for challenge 6 after removing `qiskit-aer` again, so that the cell had to install it),
+and a Colab-style emulation (Ubuntu 24.04, Python 3.12, the newest allowed library versions, project unzipped next to the notebook) ran all ten notebooks
 without errors. On **Google Colab** (2026-10-30: Python 3.13.18, Qiskit 2.6.1, NumPy 2.1.3, SciPy 1.16.3, Matplotlib 3.10.0, pytest 8.4.2) challenge 1 was worked through by hand in the Colab interface and all ten
-notebooks were executed on a Colab machine; that run found a problem with the first run of challenge 6 on a machine without Aer (all its checks were skipped), which is fixed. The test suite also passes in a Linux
+notebooks were executed on a Colab machine; that run found a problem with the first run of challenge 6 on a machine without Aer (all its checks were skipped), which is fixed. The one-click route (the **Colab** badge; the setup cell fetches the project from this repository with `git`) was tried on Google Colab on 2026-11-01, again with
+Python 3.13.18 and Qiskit 2.6.1: challenge 1 from the badge to the hand-in cell - the setup cell fetched and installed the project in 13 seconds, the public checks reported `[TODO]` for the unfinished code
+and `[PASS]` once a function was defined - and, on a second fresh machine, challenge 6 (the setup cell also installed `qiskit-aer`; all 15 public checks ran and none was skipped). The other eight notebooks were not opened
+from their badges by hand; their setup cell is the same code. The test suite also passes in a Linux
 container with exactly those Colab library versions. macOS and Qiskit versions other than 2.6.0 / 2.6.1 are **untested**; for macOS we only checked with `pip` that ready-made builds of every pinned
 library exist (Apple silicon and Intel, Python 3.11 to 3.14). Windows on ARM is not supported by the pinned versions (see *What you need*).
 Check what *your* installation does with `python -c "import qiskit_fest; print(qiskit_fest.environment_report())"`.
