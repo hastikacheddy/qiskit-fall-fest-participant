@@ -166,3 +166,8 @@ from their badges by hand; their setup cell is the same code. The test suite als
 container with exactly those Colab library versions. macOS and Qiskit versions other than 2.6.0 / 2.6.1 are **untested**; for macOS we only checked with `pip` that ready-made builds of every pinned
 library exist (Apple silicon and Intel, Python 3.11 to 3.14). Windows on ARM is not supported by the pinned versions (see *What you need*).
 Check what *your* installation does with `python -c "import qiskit_fest; print(qiskit_fest.environment_report())"`.
+
+## Licence
+
+This project is released under the [MIT License](LICENSE): you may use, copy, modify and share the notebooks, the helper code and the tests - for example to run a workshop of your own - as long as the licence text and the
+copyright notice stay with them. It comes without any warranty. Qiskit, Qiskit Aer, NumPy, SciPy, Matplotlib and pytest are separate projects under their own licences, and this project is not an official Qiskit or IBM product.
